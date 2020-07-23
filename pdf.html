@@ -1,0 +1,37 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type = "text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type = "text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type = "text/javascript"  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <style>
+         tr:nth-child(even) {
+  background-color: #f7f7f7 ;
+}
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-body">
+          <div class="mt-4">
+            <table class="display table nowrap responsive" style="width: 100%">
+                <thead class="thead-dark">
+                <tr>
+                    {% for column in df.columns %}
+                    <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+                {% for idx, row in df.iterrows() %}
+                <tr>
+                    {% for colname in df.columns %}
+                    <td>{{ row[colname] }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+          </div>
+        </div>
+    </div>
+</body>
