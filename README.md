@@ -1,7 +1,6 @@
 # python-report-generation
 Generate a PDF Report from CSV in Python using jinja2 and pdfkit.
 
-Required modules,
-jinja2
-pdfkit
-wkhtmltopdf - add this to path as environment variable
+Required modules are jinja2, pdfkit and wkhtmltopdf.
+
+Add wkhtmltopdf to the path as environment variable.
